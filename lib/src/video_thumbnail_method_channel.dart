@@ -55,6 +55,6 @@ class MethodChannelVideoThumbnail extends VideoThumbnailPlatform {
       'quality': quality,
     };
     final bytes = await methodChannel.invokeMethod('data', reqMap);
-    return bytes!;
+    return bytes ?? Uint8List(0);
   }
 }
